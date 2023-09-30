@@ -1,13 +1,13 @@
 # variaveis
-INCLUDES = average.h
-SOURCES = average.c main.c
-OBJFILES = average.o main.o
+INCLUDES = size_string.h
+SOURCES = size_string.c main.c
+OBJFILES = size_string.o main.o
 EXEC = main
 
 # Suffix rules
 .SUFFIXES : .c .o
 
-#How to build an object .o from a code file .c ; $< -- file name .c.o:
+# How to build an object .o from a code file .c ; $< -- file name .c.o:
 		gcc -g -Wall -Wextra -fanalyzer -c $<
 		
 ${EXEC}: ${OBJFILES}
@@ -20,4 +20,4 @@ run: ${EXEC}
 		
 clean:
 		rm -f ${OBJFILES} ${EXEC}
-
+		
