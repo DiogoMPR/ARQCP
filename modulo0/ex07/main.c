@@ -13,5 +13,6 @@ int main(){
 	scanf("%c", &c);
 	
 	result = getAsciiCode(c);
+	
 	printf("The character %c has %d code in the Ascii", c, result);
 }
