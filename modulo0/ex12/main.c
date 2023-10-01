@@ -4,6 +4,7 @@
  * integer referring to the integer part of the received number and another that returns an integer representing the fractional part.
  */
  
+ #include <stdio.h>
  #include "integer_part.h"
  #include "fractional_part.h"
  
