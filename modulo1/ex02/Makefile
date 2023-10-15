@@ -1,12 +1,13 @@
-prog_avg: main.o
-    gcc main.o -o prog_avg
+ex02: main.o
+	gcc main.o -o ex02
 
 main.o: main.c
-    gcc -g -Wall -Wextra -fanalyzer -c main.c -o main.o
+	gcc -g -Wall -Wextra -c main.c -o main.o
 
 clean:
-    rm -f *.o prog_avg
+	rm -f *.o ex02
 
-run: prog_avg
-    ./prog_avg
+run: ex02
+	./ex02
+
 
