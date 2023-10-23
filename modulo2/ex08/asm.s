@@ -6,11 +6,11 @@
 # declares s1 and s2 as globals and sets their types and values
 	.global s1
 	s1:
-		.short 90
+		.short 0
 	
 	.global s2
 	s2:
-		.short 54
+		.short 0
 		
 .section .text
 
@@ -19,12 +19,12 @@
 
 crossSubBytes:
 
-	mov s1(%rip), %ax # load s1 into ax
-	mov s2(%rip), %cx # load s2 into cx
+	movw s1(%rip), %cx # load s1 into cx
+	movw s2(%rip), %dx # load s2 into dx
 
-	subb %cl, %ah # Subtract the least significant byte of s2 from the most significant byte of s1
-	subb %al, %ch # Subtract the least significant byte of s1 from the most significant byte of s2
+	subb %dl, %ch # Subtract the least significant byte of s2 from the most significant byte of s1
+	subb %dh, %cl # Subtract the most significant byte of s2 from the least significant byte of s1
 	
-	movb %ch, %al # copies the value in ch to al
+	movw %cx, %ax # copies the value in cx to ax
 	
 	ret
