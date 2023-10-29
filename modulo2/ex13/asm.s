@@ -6,13 +6,29 @@
 .section .text
 .global getArea 
 
+# Function to calculate the area
+# Input: length1, length2, height
+# Output: Area = ((length1 + length2) * height) / 2
 getArea:
-    movw length1(%rip), %ax   # Move length1 para %ax
-    addw length2(%rip), %ax   # Adiciona length2 a %ax
-    movw height(%rip), %cx    # Move height para %cx
+	# Load length1 into ESI
+	movswl length1(%rip), %esi
+	# Load length2 into ECX
+	movswl length2(%rip), %ecx
+	# Load height into EAX
+	movswl height(%rip), %eax
 
-    imulw %cx                # Multiplica %ax por %cx (altura)
-    shrw $1, %ax             # Divide o resultado por 2 (mesmo que deslocar um bit para a direita)
+	# Calculate the sum of length1 and length2
+	addl %ecx, %esi
 
-    movw %ax, %di            # Move o resultado para %di (registro de destino para retorno)
-    ret
+	# Multiply the sum by the height
+	mull %esi
+
+	# Divide the result by 2 (right shift by 1)
+	shrl $1, %edx
+	xorl %edx, %edx
+
+	# Store the result in EAX
+	movl %eax, %edx
+
+	# Return the result in EDX
+	ret

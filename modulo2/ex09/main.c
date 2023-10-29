@@ -1,25 +1,26 @@
 #include <stdio.h>
 #include "asm.h"
 
-short C = 0;
-int A = 0;
-char B = 0;
-short D = 0;
+char C = 0;
+long A = 0;
+short B = 0;
+char D = 0;
 int main(void) {
-    printf("Valor C:");
-    scanf("%d", &C);
 
-    printf("Valor A:");
-    scanf("%d", &A); 
+	printf("Valor de C:");
+		scanf("%s",&C);	
 
-    printf("Valor B:");
-    scanf(" %c", &B); 
+	printf("Valor de A:");
+		scanf("%ld",&A);
+		
+	printf("Valor de D:");
+		scanf("%s",&D);	
 
-    printf("Valor D:");
-    scanf("%d", &D);
+	printf("Valor de B:");
+		scanf("%hd",&B);
 
-	sum_and_subtract();
-    printf("Resultado = %lld:0x%llx\n", sum_and_subtract, sum_and_subtract); 
+	long long resultado = sum_and_subtract();
+	printf("Result = %lld\n", resultado);
 
     return 0;
 }
