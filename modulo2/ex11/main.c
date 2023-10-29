@@ -13,7 +13,7 @@ scanf("%hd", &op2);
 
 
 char result = verify_flags();
-printf("Carry or overflow? = %d\n", result);
+printf(" Carry or Overflow = %d\n", result);
 
 return 0;
 
