@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "asm.h"
 
-int A = 10, B = 2;
-
 int main(){
-	printf("%c\n", isMultiple())
+	int area = getArea();
+	
+	printf("Area:%d\n", area);
+	
 	return 0;
 }
