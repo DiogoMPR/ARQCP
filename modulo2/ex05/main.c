@@ -7,8 +7,8 @@ int main(void) {
 	printf("Valor s1:");
 	scanf("%hd",&s1);
 
-	swapBytes();
-	printf("Swap Bytes = %d:0x%x\n", swapBytes(), swapBytes());
+	short result = swapBytes();
+	printf("Swap Bytes = %d:0x%x\n", result, result);
 	
 	return 0;
 }
