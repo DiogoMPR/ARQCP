@@ -1,12 +1,16 @@
 #ifndef ASM_H
 #define ASM_H
 
-extern int add(int a, int b);
-extern int subtract(int a, int b);
-extern int multiply(int a, int b);
-extern int divide(int a, int b);
-extern int modulus(int a, int b);
-extern int power_of_2(int a);
-extern int power_of_3(int a);
+extern int number1;
+extern int number2;
+extern int res;
+
+void sum();
+void subtraction();
+void multiplication();
+void division();
+void modulus();
+void power2();
+void power3();
 
 #endif

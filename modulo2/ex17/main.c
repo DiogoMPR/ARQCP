@@ -2,31 +2,31 @@
 #include "asm.h"
 
 int main() {
-    int a, b, result;
+    number1 = 10;
+    number2 = 3;
+    res = 0; 
 
-    printf("Enter two integers: ");
-    scanf("%d %d", &a, &b);
+    sum();
+    printf("Sum: %d\n", res);
 
-    result = add(a, b);
-    printf("Sum: %d\n", result);
+    subtraction();
+    printf("Subtraction: %d\n", res);
 
-    result = subtract(a, b);
-    printf("Subtraction: %d\n", result);
+    multiplication();
+    printf("Multiplication: %d\n", res);
 
-    result = multiply(a, b);
-    printf("Multiplication: %d\n", result);
+    division();
+    printf("Division: %d\n", res);
 
-    result = divide(a, b);
-    printf("Division: %d\n", result);
+    modulus();
+    printf("Modulus: %d\n", res);
 
-    result = modulus(a, b);
-    printf("Modulus: %d\n", result);
+    power2();
+    printf("Power of 2: %d\n", res);
 
-    result = power_of_2(a);
-    printf("2^a: %d\n", result);
-
-    result = power_of_3(a);
-    printf("3^a: %d\n", result);
+    power3();
+    printf("Power of 3: %d\n", res);
 
     return 0;
 }
+
