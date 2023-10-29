@@ -8,12 +8,26 @@
 .global compute 
 
 compute:
-    movslq A(%rip), %rax     # Move o valor de A para %rax (64 bits)
-    imulq B(%rip), %rax      # Multiplica A por B e armazena em %rax
-    movslq C(%rip), %rcx     # Move o valor de C para %rcx (64 bits)
-    imulq A(%rip), %rcx      # Multiplica C por A e armazena em %rcx
-    subq %rcx, %rax          # Subtrai o valor de %rcx (C * A) de %rax
-    movslq D(%rip), %rcx     # Move o valor de D para %rcx (64 bits)
-    idivq %rcx               # Divide o valor de %rax pelo valor de %rcx (D)
+	
+	# Move the value of A to %rax 
+	movslq A(%rip), %rax
+	
+	# Multiply A by B and store the result in %rax    
+    imulq B(%rip), %rax      
+    
+    # Move the value of C to %rcx 
+    movslq C(%rip), %rcx    
+    
+    # Multiply C by A and store the result in %rcx
+    imulq A(%rip), %rcx      
+    
+    # Subtract the value of %rcx (C * A) from %rax
+    subq %rcx, %rax          
+    
+    # Move the value of D to %rcx 
+    movslq D(%rip), %rcx     
+    
+    # Divide the value in %rax by the value in %rcx (D)
+    idivq %rcx               
     ret
 
