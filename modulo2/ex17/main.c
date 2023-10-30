@@ -1,10 +1,17 @@
 #include <stdio.h>
 #include "asm.h"
 
+int number1 = 0;
+int number2 = 0;
+int res = 0; 
+
 int main() {
-    number1 = 10;
-    number2 = 3;
-    res = 0; 
+
+	printf("Number 1:");
+	scanf("%d", &number1);
+
+	printf("NUmber 2:");
+	scanf("%d", &number2);
 
     sum();
     printf("Sum: %d\n", res);

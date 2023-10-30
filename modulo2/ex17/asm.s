@@ -1,11 +1,12 @@
+#Implement a basic calculator with support for the following integer arithmetic operations: sum,
+#subtraction, multiplication, division, modulus, powers of 2 and 3. Each of these operations should
+#be implemented in a separate function in Assembly. The integer operands should be declared in C,
+#while the computed result should be a 32-bit value declared in Assembly.
+
+
 .section .data
     .global number1, number2, res
-number1:
-    .int 0  # Defina um valor inicial para number1
-number2:
-    .int 0  # Defina um valor inicial para number2
-res:
-    .int 0  # Defina um valor inicial para res
+
     
 .section .text
     .global sum,
@@ -102,5 +103,6 @@ power3:
 ret                             # Return from the function.
 
 divisor_zero:
-    movq $0, res(%rip)      # Set the result to 0 in case of a division by zero
-ret                         # Return from the function
+# Set the result to 0 in case of a division by zero
+    movq $0, res(%rip)      
+ret                         

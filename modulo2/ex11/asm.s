@@ -15,22 +15,22 @@ verify_flags:
     # Add the values in registers DX and CX, storing the result in CX
     addw %dx, %cx
     
-    # Check if the carry flag is set (CF). If set, jump to carry_detected.
-    jc carry_detected
+    # Check if the carry flag is set (CF). If set, jump to carry_alert.
+    jc carry_alert
     
-    # Check if the overflow flag is set (OF). If set, jump to overflow_detected.
-    jo overflow_detected
+    # Check if the overflow flag is set (OF). If set, jump to overflow_alert.
+    jo overflow_alert
     
     # If neither carry nor overflow flags are set, set AL to 0.
     movb $0, %al
     jmp end
 
-carry_detected:
+carry_alert:
     # Set AL to 1 to indicate carry detected.
     movb $1, %al
     jmp end
 
-overflow_detected:
+overflow_alert:
     # Set AL to 1 to indicate overflow detected.
 
 end:
