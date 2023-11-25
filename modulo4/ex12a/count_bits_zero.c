@@ -1,11 +1,12 @@
+
 int count_bits_zero(long x){
-	int counter = 0;
+	int count = 0;
 	
-	while(x != 0){ // iterates through each bit of the number
-		if((x & 1) == 0){ // checks if the least significant bit is 0
-			counter++;
+	for(int i = 0; i < 64; i++){ // iterates over all bits from x
+		if((x & 1) == 0){  // verifies if the lsb of x is 0 using the AND operation
+			count++;
 		}
-		x >>= 1; // Right shift the number in order to move to the next bit
+		x = x >> 1; // shift right of x
 	}
-	return counter;
+	return count;
 }

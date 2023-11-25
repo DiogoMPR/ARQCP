@@ -17,7 +17,7 @@ decr:
 	movl %eax, -8(%rbp) # copies the value in eax to the x variable
 	
 	movsbl %sil, %ecx # copies the char value from sil, converts it into a int and places it in ecx (int val)
-	imull $2, %ecx # multiplies ecx by 2, the value is in ecx
+	imull $4, %ecx # multiplies ecx by 2, the value is in ecx
 	
 	subl %ecx, -8(%rbp) # subtract x to the value in ecx
 	movl -8(%rbp), %edx # copies the value in the x variable to edx
