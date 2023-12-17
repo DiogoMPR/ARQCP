@@ -1,6 +1,5 @@
  .section .rodata
 .jumptable:
-
     .long   .year-.jumptable    # 0
     .long   .month-.jumptable   # 1
     .long   .day-.jumptable     # 2
