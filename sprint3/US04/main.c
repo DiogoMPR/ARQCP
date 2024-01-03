@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "asm.h"
 
-int num = 6;
-int vec1[] = {3, 7, 2, -12, 4, 5};
+int num = 5;
+int vec1[] = {3, 7, 2, -12, 4};
 
 int* vec = vec1;
 
